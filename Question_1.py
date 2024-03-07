@@ -34,19 +34,17 @@ with open('data.json','r') as file:
     data=json.load(file)
     #print(data)
     
-data_array = []
 
 items = data['items']
 for item in items:
+   
     new_dict ={
         "name":item.get('name'),
         "categories":item.get('categories'),
         "image":item.get('image'),
         "base_price":item.get('base_price'),
         "availability_status":item.get('availability_status')
-    }
-    
-data_array.append(new_dict)
+        }
 
-print(data_array)
+    print(new_dict)
     
